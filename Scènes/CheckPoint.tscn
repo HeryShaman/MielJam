@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://ca2eo270tsxd0"]
+
+[ext_resource type="Script" uid="uid://dcxpjqbgndl3s" path="res://Scripts/CheckPoint.gd" id="1_gw2q5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6spk4"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_tllld"]
+size = Vector2(1, 20)
+
+[sub_resource type="QuadMesh" id="QuadMesh_6spk4"]
+size = Vector2(10, 5)
+
+[node name="CheckPoint" type="Area2D"]
+scale = Vector2(2.5, 2.5)
+script = ExtResource("1_gw2q5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_6spk4")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+mesh = SubResource("QuadMesh_tllld")
+
+[node name="Flag" type="MeshInstance2D" parent="MeshInstance2D"]
+position = Vector2(4.7683716e-07, -8)
+scale = Vector2(0.06492223, 0.80023956)
+mesh = SubResource("QuadMesh_6spk4")

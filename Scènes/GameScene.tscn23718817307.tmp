@@ -1,0 +1,167 @@
+[gd_scene load_steps=8 format=3 uid="uid://cxenpym3287wf"]
+
+[ext_resource type="Script" uid="uid://stv50bsmqqiv" path="res://Scènes/Game_Manager.gd" id="1_gcslt"]
+[ext_resource type="PackedScene" uid="uid://1revtuskc1fl" path="res://Scènes/Ship.tscn" id="1_vuaey"]
+[ext_resource type="PackedScene" uid="uid://d1q0aron3h1bb" path="res://Scènes/User_Interface.tscn" id="2_0kuk6"]
+[ext_resource type="PackedScene" uid="uid://ca2eo270tsxd0" path="res://CheckPoint.tscn" id="4_1sowh"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_gcslt"]
+friction = 0.0
+
+[sub_resource type="QuadMesh" id="QuadMesh_gcslt"]
+size = Vector2(20, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1sowh"]
+
+[node name="GameScene" type="Node2D"]
+script = ExtResource("1_gcslt")
+
+[node name="UI" parent="." instance=ExtResource("2_0kuk6")]
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("1_vuaey")]
+Speed = 2.0
+RotSpeed = 0.05
+Friction = 0.99
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+
+[node name="Environnement" type="Node2D" parent="."]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Environnement"]
+position = Vector2(0, 32)
+scale = Vector2(7.711979, -1.4066412)
+physics_material_override = SubResource("PhysicsMaterial_gcslt")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Environnement/StaticBody2D"]
+mesh = SubResource("QuadMesh_gcslt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environnement/StaticBody2D"]
+shape = SubResource("RectangleShape2D_1sowh")
+
+[node name="StaticBody2D6" type="StaticBody2D" parent="Environnement"]
+position = Vector2(0, -512)
+scale = Vector2(51.995247, -1.6994205)
+physics_material_override = SubResource("PhysicsMaterial_gcslt")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Environnement/StaticBody2D6"]
+mesh = SubResource("QuadMesh_gcslt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environnement/StaticBody2D6"]
+shape = SubResource("RectangleShape2D_1sowh")
+
+[node name="StaticBody2D7" type="StaticBody2D" parent="Environnement"]
+position = Vector2(504, -408)
+rotation = 4.712389
+scale = Vector2(51.995247, -1.6994205)
+physics_material_override = SubResource("PhysicsMaterial_gcslt")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Environnement/StaticBody2D7"]
+mesh = SubResource("QuadMesh_gcslt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environnement/StaticBody2D7"]
+shape = SubResource("RectangleShape2D_1sowh")
+
+[node name="StaticBody2D8" type="StaticBody2D" parent="Environnement"]
+position = Vector2(-872, -512)
+rotation = 6.2831855
+scale = Vector2(51.995247, -1.6994205)
+physics_material_override = SubResource("PhysicsMaterial_gcslt")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Environnement/StaticBody2D8"]
+mesh = SubResource("QuadMesh_gcslt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environnement/StaticBody2D8"]
+shape = SubResource("RectangleShape2D_1sowh")
+
+[node name="StaticBody2D9" type="StaticBody2D" parent="Environnement"]
+position = Vector2(-1232.0001, -864)
+rotation = 6.2831855
+scale = Vector2(51.995247, -1.6994205)
+physics_material_override = SubResource("PhysicsMaterial_gcslt")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Environnement/StaticBody2D9"]
+mesh = SubResource("QuadMesh_gcslt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environnement/StaticBody2D9"]
+shape = SubResource("RectangleShape2D_1sowh")
+
+[node name="StaticBody2D10" type="StaticBody2D" parent="Environnement"]
+position = Vector2(-272, -1120)
+rotation = 5.759587
+scale = Vector2(51.995247, -1.6994205)
+physics_material_override = SubResource("PhysicsMaterial_gcslt")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Environnement/StaticBody2D10"]
+mesh = SubResource("QuadMesh_gcslt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environnement/StaticBody2D10"]
+shape = SubResource("RectangleShape2D_1sowh")
+
+[node name="StaticBody2D11" type="StaticBody2D" parent="Environnement"]
+position = Vector2(664, -1240)
+rotation = 6.544985
+scale = Vector2(51.995247, -1.6994205)
+physics_material_override = SubResource("PhysicsMaterial_gcslt")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Environnement/StaticBody2D11"]
+mesh = SubResource("QuadMesh_gcslt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environnement/StaticBody2D11"]
+shape = SubResource("RectangleShape2D_1sowh")
+
+[node name="StaticBody2D12" type="StaticBody2D" parent="Environnement"]
+position = Vector2(1168, -1152)
+rotation = 7.853982
+scale = Vector2(54.408867, -2.322624)
+physics_material_override = SubResource("PhysicsMaterial_gcslt")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Environnement/StaticBody2D12"]
+mesh = SubResource("QuadMesh_gcslt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environnement/StaticBody2D12"]
+shape = SubResource("RectangleShape2D_1sowh")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Environnement"]
+position = Vector2(3.0517578e-05, 95.99999)
+scale = Vector2(176.6415, -0.9130784)
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Environnement/StaticBody2D2"]
+mesh = SubResource("QuadMesh_gcslt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environnement/StaticBody2D2"]
+shape = SubResource("RectangleShape2D_1sowh")
+
+[node name="StaticBody2D5" type="StaticBody2D" parent="Environnement"]
+position = Vector2(4.3368087e-19, -3408.0002)
+scale = Vector2(176.6415, -0.9130784)
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Environnement/StaticBody2D5"]
+mesh = SubResource("QuadMesh_gcslt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environnement/StaticBody2D5"]
+shape = SubResource("RectangleShape2D_1sowh")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="Environnement"]
+position = Vector2(-1751.9999, -1656.0001)
+rotation = 1.5707964
+scale = Vector2(176.6415, -0.9130784)
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Environnement/StaticBody2D3"]
+mesh = SubResource("QuadMesh_gcslt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environnement/StaticBody2D3"]
+shape = SubResource("RectangleShape2D_1sowh")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="Environnement"]
+position = Vector2(1760.0006, -1656.0001)
+rotation = 1.5707964
+scale = Vector2(176.6415, -0.9130784)
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Environnement/StaticBody2D4"]
+mesh = SubResource("QuadMesh_gcslt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environnement/StaticBody2D4"]
+shape = SubResource("RectangleShape2D_1sowh")
+
+[node name="Area2D" parent="." instance=ExtResource("4_1sowh")]
+position = Vector2(-64, 8)

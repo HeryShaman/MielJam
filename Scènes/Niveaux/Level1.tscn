@@ -1,0 +1,69 @@
+[gd_scene load_steps=4 format=3 uid="uid://cxenpym3287wf"]
+
+[ext_resource type="PackedScene" uid="uid://d1q0aron3h1bb" path="res://Scènes/User_Interface.tscn" id="1_t3077"]
+[ext_resource type="PackedScene" uid="uid://1revtuskc1fl" path="res://Scènes/Ship.tscn" id="2_i1mna"]
+[ext_resource type="PackedScene" uid="uid://blx111f2nfqno" path="res://Scènes/Bloc.tscn" id="3_i1mna"]
+
+[node name="Level1" type="Node2D"]
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = -64.0
+offset_top = -1216.0
+offset_right = 776.0
+offset_bottom = 40.0
+
+[node name="UI" parent="." instance=ExtResource("1_t3077")]
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("2_i1mna")]
+Friction = 0.995
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+
+[node name="Environnement" type="Node2D" parent="." groups=["Environnement"]]
+
+[node name="Asteroid" parent="." instance=ExtResource("3_i1mna")]
+position = Vector2(-8, 224)
+
+[node name="Asteroid8" parent="." instance=ExtResource("3_i1mna")]
+position = Vector2(336, 192)
+scale = Vector2(0.7578645, 0.7578645)
+
+[node name="Asteroid4" parent="." instance=ExtResource("3_i1mna")]
+position = Vector2(255.99998, -120.000015)
+scale = Vector2(0.4864729, 0.4864729)
+
+[node name="Asteroid5" parent="." instance=ExtResource("3_i1mna")]
+position = Vector2(376.00003, -224)
+scale = Vector2(0.3259897, 0.3259897)
+
+[node name="Asteroid7" parent="." instance=ExtResource("3_i1mna")]
+position = Vector2(472, -48)
+scale = Vector2(0.1899662, 0.1899662)
+
+[node name="Asteroid9" parent="." instance=ExtResource("3_i1mna")]
+position = Vector2(504, -152)
+scale = Vector2(0.1899662, 0.1899662)
+
+[node name="Asteroid10" parent="." instance=ExtResource("3_i1mna")]
+position = Vector2(607.99994, -89)
+scale = Vector2(0.1899662, 0.1899662)
+
+[node name="Asteroid6" parent="." instance=ExtResource("3_i1mna")]
+position = Vector2(40, -152)
+scale = Vector2(0.35021782, 0.35021782)
+
+[node name="Asteroid11" parent="." instance=ExtResource("3_i1mna")]
+position = Vector2(144, -320)
+scale = Vector2(0.35021782, 0.35021782)
+
+[node name="Asteroid12" parent="." instance=ExtResource("3_i1mna")]
+position = Vector2(-80, -544)
+scale = Vector2(1.0314325, 1.0314325)
+
+[node name="Asteroid2" parent="." instance=ExtResource("3_i1mna")]
+position = Vector2(-399.99997, -120.00002)
+scale = Vector2(1.7057872, 1.7057872)
+
+[node name="Asteroid3" parent="." instance=ExtResource("3_i1mna")]
+position = Vector2(800, 296)
+scale = Vector2(1.7057872, 1.7057872)

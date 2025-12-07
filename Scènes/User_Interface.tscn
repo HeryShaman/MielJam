@@ -1,0 +1,47 @@
+[gd_scene load_steps=5 format=3 uid="uid://d1q0aron3h1bb"]
+
+[ext_resource type="Script" uid="uid://qpdoviwdn86h" path="res://Scripts/User_Interface.gd" id="1_3dvho"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3dvho"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3dvho"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_3dvho"]
+material = SubResource("StandardMaterial3D_3dvho")
+radius = 20.0
+height = 40.0
+
+[node name="UI" type="CanvasLayer"]
+script = ExtResource("1_3dvho")
+InitialPosP1 = Vector2(450, 600)
+InitialPosP2 = Vector2(850, 600)
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = 410.0
+offset_top = 562.0
+offset_right = 450.0
+offset_bottom = 602.0
+scale = Vector2(2, 2)
+
+[node name="Panel2" type="Panel" parent="."]
+offset_left = 810.0
+offset_top = 563.0
+offset_right = 850.0
+offset_bottom = 603.0
+scale = Vector2(2, 2)
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_3dvho")
+
+[node name="P1Joystick" type="MeshInstance2D" parent="PanelContainer"]
+position = Vector2(461, 608)
+mesh = SubResource("SphereMesh_3dvho")
+
+[node name="P2Joystick" type="MeshInstance2D" parent="PanelContainer"]
+position = Vector2(864, 601)
+mesh = SubResource("SphereMesh_3dvho")
