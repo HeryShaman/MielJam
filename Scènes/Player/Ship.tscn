@@ -1,20 +1,14 @@
-[gd_scene load_steps=7 format=3 uid="uid://1revtuskc1fl"]
+[gd_scene load_steps=6 format=3 uid="uid://1revtuskc1fl"]
 
 [ext_resource type="Script" uid="uid://dvab6ufm71mqp" path="res://Scripts/Player/Ship_Movement.gd" id="1_shlol"]
 [ext_resource type="PackedScene" uid="uid://couuyph11gi1q" path="res://Scènes/VFX/Explosion_VFX.tscn" id="2_4lrvr"]
-
-[sub_resource type="SphereMesh" id="SphereMesh_shlol"]
-radius = 10.0
-height = 20.0
-
-[sub_resource type="QuadMesh" id="QuadMesh_shlol"]
-size = Vector2(10, 10)
+[ext_resource type="Texture2D" uid="uid://b6ktmn23kfobo" path="res://Shaders/Player Sprite.png" id="3_glnwb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_shlol"]
-size = Vector2(6, 14)
+size = Vector2(25.5, 7)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_shlol"]
-radius = 9.0
+radius = 22.543993
 
 [node name="CharacterBody2D" type="CharacterBody2D" groups=["Player"]]
 script = ExtResource("1_shlol")
@@ -24,29 +18,33 @@ DeathParticles = ExtResource("2_4lrvr")
 
 [node name="PlayerModel" type="Node2D" parent="."]
 
-[node name="MeshInstance2D" type="MeshInstance2D" parent="PlayerModel"]
-rotation = -0.006714331
-mesh = SubResource("SphereMesh_shlol")
-
-[node name="MeshInstance2D2" type="MeshInstance2D" parent="PlayerModel"]
-position = Vector2(8, 10)
-scale = Vector2(0.5, 0.99999994)
-skew = -0.74176496
-mesh = SubResource("QuadMesh_shlol")
-
-[node name="MeshInstance2D3" type="MeshInstance2D" parent="PlayerModel"]
-position = Vector2(-8, 10)
-scale = Vector2(0.5, 0.99999994)
-skew = 0.7417649
-mesh = SubResource("QuadMesh_shlol")
+[node name="PlayerSprite" type="Sprite2D" parent="PlayerModel"]
+position = Vector2(0, -4.0758495)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("3_glnwb")
 
 [node name="LaunchCol" type="CollisionShape2D" parent="."]
-position = Vector2(0, 7)
+position = Vector2(0, 41.999996)
+scale = Vector2(1, 1.0058734)
 shape = SubResource("RectangleShape2D_shlol")
 
 [node name="Area2D" type="Area2D" parent="." groups=["Player"]]
+position = Vector2(0, -16)
+scale = Vector2(0.6800009, 0.6800009)
 
 [node name="RocketCol" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, -27)
+scale = Vector2(0.53229254, 1.2407674)
+shape = SubResource("CircleShape2D_shlol")
+
+[node name="Area2D2" type="Area2D" parent="." groups=["Player"]]
+position = Vector2(0, -5)
+scale = Vector2(1.0455627, 1.1255635)
+
+[node name="RocketCol" type="CollisionShape2D" parent="Area2D2"]
+position = Vector2(0, 12.999999)
+scale = Vector2(0.53229254, 1.2407674)
 shape = SubResource("CircleShape2D_shlol")
 
 [connection signal="body_entered" from="Area2D" to="." method="OnRocketCollision"]
+[connection signal="body_entered" from="Area2D2" to="." method="OnRocketCollision"]

@@ -1,18 +1,17 @@
 [gd_scene load_steps=3 format=3 uid="uid://blx111f2nfqno"]
 
-[sub_resource type="SphereMesh" id="SphereMesh_enlrw"]
-radius = 5.0
-height = 10.0
+[ext_resource type="Texture2D" uid="uid://xcbj1q4muhdc" path="res://Shaders/Asteroid.png" id="1_lwv1b"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_yjbqy"]
 radius = 200.0
 
 [node name="Asteroid" type="StaticBody2D" groups=["Environnement"]]
 
-[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
-scale = Vector2(38.45463, 38.686752)
-mesh = SubResource("SphereMesh_enlrw")
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(1.1200001, 1.1200001)
+texture = ExtResource("1_lwv1b")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-scale = Vector2(0.97196174, 0.97196174)
+position = Vector2(8, 16)
+scale = Vector2(1.2650174, 1.0519618)
 shape = SubResource("CircleShape2D_yjbqy")
