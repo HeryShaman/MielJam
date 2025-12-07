@@ -6,6 +6,10 @@ extends CharacterBody2D
 
 @export var DeathParticles : PackedScene
 
+@onready var sfx_move_forward: AudioStreamPlayer = $sfx_moveForward
+@onready var sfx_move_backward: AudioStreamPlayer = $sfx_moveBackward
+@onready var sfx_death_explode: AudioStreamPlayer = $sfx_death_explode
+
 var Wishvel1 : Vector2 = Vector2.ZERO
 var Wishvel2 : Vector2 = Vector2.ZERO
 var ShipDir : Vector2 = Vector2.ZERO
