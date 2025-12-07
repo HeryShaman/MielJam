@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://d1q0aron3h1bb"]
 
-[ext_resource type="Script" uid="uid://qpdoviwdn86h" path="res://Scripts/User_Interface.gd" id="1_3dvho"]
+[ext_resource type="Script" uid="uid://qpdoviwdn86h" path="res://Scripts/Player/User_Interface.gd" id="1_3dvho"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3dvho"]
 

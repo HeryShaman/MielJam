@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://ca2eo270tsxd0"]
 
-[ext_resource type="Script" uid="uid://dcxpjqbgndl3s" path="res://Scripts/CheckPoint.gd" id="1_gw2q5"]
+[ext_resource type="Script" uid="uid://dcxpjqbgndl3s" path="res://Scripts/Assets/CheckPoint.gd" id="1_gw2q5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6spk4"]
 
@@ -24,3 +24,5 @@ mesh = SubResource("QuadMesh_tllld")
 position = Vector2(4.7683716e-07, -8)
 scale = Vector2(0.06492223, 0.80023956)
 mesh = SubResource("QuadMesh_6spk4")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

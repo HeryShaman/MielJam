@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://1revtuskc1fl"]
 
-[ext_resource type="Script" uid="uid://dvab6ufm71mqp" path="res://Scripts/Ship_Movement.gd" id="1_shlol"]
+[ext_resource type="Script" uid="uid://dvab6ufm71mqp" path="res://Scripts/Player/Ship_Movement.gd" id="1_shlol"]
 [ext_resource type="PackedScene" uid="uid://couuyph11gi1q" path="res://Scènes/VFX/Explosion_VFX.tscn" id="2_4lrvr"]
 
 [sub_resource type="SphereMesh" id="SphereMesh_shlol"]
@@ -44,7 +44,7 @@ mesh = SubResource("QuadMesh_shlol")
 position = Vector2(0, 7)
 shape = SubResource("RectangleShape2D_shlol")
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Area2D" type="Area2D" parent="." groups=["Player"]]
 
 [node name="RocketCol" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CircleShape2D_shlol")
