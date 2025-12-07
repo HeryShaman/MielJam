@@ -1,33 +1,21 @@
-<<<<<<< HEAD
-[gd_scene load_steps=7 format=3 uid="uid://cxenpym3287wf"]
-=======
 [gd_scene load_steps=9 format=3 uid="uid://cxenpym3287wf"]
->>>>>>> ab3ca6fb8b8f178bd900ba0795d56183f5473241
 
 [ext_resource type="PackedScene" uid="uid://d1q0aron3h1bb" path="res://Scènes/Player/User_Interface.tscn" id="1_t3077"]
-[ext_resource type="Texture2D" uid="uid://g2nijfi4joru" path="res://Shaders/Space Background.png" id="1_y3gs8"]
 [ext_resource type="PackedScene" uid="uid://1revtuskc1fl" path="res://Scènes/Player/Ship.tscn" id="2_i1mna"]
 [ext_resource type="PackedScene" uid="uid://blx111f2nfqno" path="res://Scènes/Assets/Asteroid.tscn" id="3_i1mna"]
 [ext_resource type="AudioStream" uid="uid://b1ywycft7wwsu" path="res://Sons/launch_sound.wav" id="3_s1oxw"]
 [ext_resource type="PackedScene" uid="uid://ca2eo270tsxd0" path="res://Scènes/Assets/CheckPoint.tscn" id="4_k83gu"]
-<<<<<<< HEAD
-[ext_resource type="PackedScene" uid="uid://dtvq8bc7muw8a" path="res://Scènes/Assets/NextPointArea.tscn" id="6_j5hba"]
-=======
 [ext_resource type="AudioStream" uid="uid://do1ufgyyx0r3b" path="res://Sons/land_sound.wav" id="4_wvc6q"]
 [ext_resource type="AudioStream" uid="uid://c5b05j528txdt" path="res://Sons/explosion_sound.wav" id="5_ukrm5"]
 [ext_resource type="AudioStream" uid="uid://qoe627xmxs1o" path="res://Sons/fly_loop_3.wav" id="6_f23ta"]
->>>>>>> ab3ca6fb8b8f178bd900ba0795d56183f5473241
 
 [node name="Level1" type="Node2D"]
 
-[node name="TextureRect" type="TextureRect" parent="."]
-offset_left = -2592.0
-offset_top = -2272.0
-offset_right = -912.7648
-offset_bottom = -1326.8304
-scale = Vector2(3.7024367, 3.7222357)
-texture = ExtResource("1_y3gs8")
-expand_mode = 3
+[node name="Panel" type="Panel" parent="."]
+offset_left = -64.0
+offset_top = -1216.0
+offset_right = 776.0
+offset_bottom = 40.0
 
 [node name="UI" parent="." instance=ExtResource("1_t3077")]
 
@@ -55,7 +43,7 @@ volume_db = -3.0
 [node name="Environnement" type="Node2D" parent="." groups=["Environnement"]]
 
 [node name="Asteroid" parent="." instance=ExtResource("3_i1mna")]
-position = Vector2(-88, 392)
+position = Vector2(-8, 224)
 
 [node name="Asteroid17" parent="." instance=ExtResource("3_i1mna")]
 position = Vector2(969, -211)
@@ -183,11 +171,4 @@ position = Vector2(800, 296)
 scale = Vector2(1.7057872, 1.7057872)
 
 [node name="CheckPoint" parent="." instance=ExtResource("4_k83gu")]
-position = Vector2(558, -296)
-
-[node name="CheckPoint2" parent="." instance=ExtResource("4_k83gu")]
-position = Vector2(328.00003, -688.00006)
-
-[node name="NextLevel" parent="." instance=ExtResource("6_j5hba")]
-position = Vector2(765.00006, -1080)
-scale = Vector2(2.0772495, 2.0772495)
+position = Vector2(256, -240)
