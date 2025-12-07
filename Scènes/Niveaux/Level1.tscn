@@ -24,36 +24,113 @@ Friction = 0.995
 [node name="Asteroid" parent="." instance=ExtResource("3_i1mna")]
 position = Vector2(-8, 224)
 
+[node name="Asteroid17" parent="." instance=ExtResource("3_i1mna")]
+position = Vector2(969, -211)
+
+[node name="Asteroid23" parent="." instance=ExtResource("3_i1mna")]
+position = Vector2(827, -877)
+
+[node name="Asteroid28" parent="." instance=ExtResource("3_i1mna")]
+position = Vector2(389, -1409)
+
 [node name="Asteroid8" parent="." instance=ExtResource("3_i1mna")]
 position = Vector2(336, 192)
+scale = Vector2(0.7578645, 0.7578645)
+
+[node name="Asteroid19" parent="." instance=ExtResource("3_i1mna")]
+position = Vector2(924, -549)
+scale = Vector2(0.7578645, 0.7578645)
+
+[node name="Asteroid29" parent="." instance=ExtResource("3_i1mna")]
+position = Vector2(679, -1312)
+scale = Vector2(-0.56278366, -0.5227861)
+
+[node name="Asteroid25" parent="." instance=ExtResource("3_i1mna")]
+position = Vector2(-171, -883)
+scale = Vector2(0.7578645, 0.7578645)
+
+[node name="Asteroid26" parent="." instance=ExtResource("3_i1mna")]
+position = Vector2(923, -1210)
+scale = Vector2(0.7578645, 0.7578645)
+
+[node name="Asteroid15" parent="." instance=ExtResource("3_i1mna")]
+position = Vector2(477.99997, -516)
 scale = Vector2(0.7578645, 0.7578645)
 
 [node name="Asteroid4" parent="." instance=ExtResource("3_i1mna")]
 position = Vector2(255.99998, -120.000015)
 scale = Vector2(0.4864729, 0.4864729)
 
+[node name="Asteroid13" parent="." instance=ExtResource("3_i1mna")]
+position = Vector2(211, -570)
+scale = Vector2(0.4864729, 0.4864729)
+
+[node name="Asteroid30" parent="." instance=ExtResource("3_i1mna")]
+position = Vector2(310.00003, -908)
+scale = Vector2(0.4864729, 0.4864729)
+
+[node name="Asteroid32" parent="." instance=ExtResource("3_i1mna")]
+position = Vector2(18, -814)
+scale = Vector2(0.2660482, 0.2660482)
+
+[node name="Asteroid35" parent="." instance=ExtResource("3_i1mna")]
+position = Vector2(595, -971)
+scale = Vector2(0.2660482, 0.2660482)
+
+[node name="Asteroid34" parent="." instance=ExtResource("3_i1mna")]
+position = Vector2(171, -970)
+scale = Vector2(0.2660482, 0.2660482)
+
+[node name="Asteroid36" parent="." instance=ExtResource("3_i1mna")]
+position = Vector2(451.00003, -853)
+scale = Vector2(0.2660482, 0.2660482)
+
+[node name="Asteroid37" parent="." instance=ExtResource("3_i1mna")]
+position = Vector2(499, -1024)
+scale = Vector2(0.2660482, 0.2660482)
+
 [node name="Asteroid5" parent="." instance=ExtResource("3_i1mna")]
 position = Vector2(376.00003, -224)
 scale = Vector2(0.3259897, 0.3259897)
 
-[node name="Asteroid7" parent="." instance=ExtResource("3_i1mna")]
-position = Vector2(472, -48)
-scale = Vector2(0.1899662, 0.1899662)
+[node name="Asteroid18" parent="." instance=ExtResource("3_i1mna")]
+position = Vector2(704, -139)
+scale = Vector2(0.3259897, 0.3259897)
 
-[node name="Asteroid9" parent="." instance=ExtResource("3_i1mna")]
-position = Vector2(504, -152)
+[node name="Asteroid7" parent="." instance=ExtResource("3_i1mna")]
+position = Vector2(499, -46)
 scale = Vector2(0.1899662, 0.1899662)
 
 [node name="Asteroid10" parent="." instance=ExtResource("3_i1mna")]
-position = Vector2(607.99994, -89)
+position = Vector2(558, -240.99998)
+scale = Vector2(0.1899662, 0.1899662)
+
+[node name="Asteroid20" parent="." instance=ExtResource("3_i1mna")]
+position = Vector2(729, -364.99997)
+scale = Vector2(0.1899662, 0.1899662)
+
+[node name="Asteroid21" parent="." instance=ExtResource("3_i1mna")]
+position = Vector2(419.00003, -1071.9999)
+scale = Vector2(0.1899662, 0.1899662)
+
+[node name="Asteroid31" parent="." instance=ExtResource("3_i1mna")]
+position = Vector2(187.00002, -1177)
+scale = Vector2(0.1899662, 0.1899662)
+
+[node name="Asteroid22" parent="." instance=ExtResource("3_i1mna")]
+position = Vector2(735, -660.99994)
+scale = Vector2(0.1899662, 0.1899662)
+
+[node name="Asteroid38" parent="." instance=ExtResource("3_i1mna")]
+position = Vector2(328.00003, -630)
 scale = Vector2(0.1899662, 0.1899662)
 
 [node name="Asteroid6" parent="." instance=ExtResource("3_i1mna")]
-position = Vector2(40, -152)
+position = Vector2(5, -155)
 scale = Vector2(0.35021782, 0.35021782)
 
 [node name="Asteroid11" parent="." instance=ExtResource("3_i1mna")]
-position = Vector2(144, -320)
+position = Vector2(150, -358)
 scale = Vector2(0.35021782, 0.35021782)
 
 [node name="Asteroid12" parent="." instance=ExtResource("3_i1mna")]
@@ -62,6 +139,10 @@ scale = Vector2(1.0314325, 1.0314325)
 
 [node name="Asteroid2" parent="." instance=ExtResource("3_i1mna")]
 position = Vector2(-399.99997, -120.00002)
+scale = Vector2(1.7057872, 1.7057872)
+
+[node name="Asteroid27" parent="." instance=ExtResource("3_i1mna")]
+position = Vector2(-133, -1364.0001)
 scale = Vector2(1.7057872, 1.7057872)
 
 [node name="Asteroid3" parent="." instance=ExtResource("3_i1mna")]
