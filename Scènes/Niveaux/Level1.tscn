@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://cxenpym3287wf"]
+[gd_scene load_steps=9 format=3 uid="uid://bnbpisyutt25l"]
 
 [ext_resource type="PackedScene" uid="uid://d1q0aron3h1bb" path="res://Scènes/Player/User_Interface.tscn" id="1_t3077"]
 [ext_resource type="PackedScene" uid="uid://1revtuskc1fl" path="res://Scènes/Player/Ship.tscn" id="2_i1mna"]
@@ -43,7 +43,8 @@ volume_db = -3.0
 [node name="Environnement" type="Node2D" parent="." groups=["Environnement"]]
 
 [node name="Asteroid" parent="." instance=ExtResource("3_i1mna")]
-position = Vector2(-8, 224)
+position = Vector2(-40, 352)
+scale = Vector2(1.3582412, 1.3582412)
 
 [node name="Asteroid17" parent="." instance=ExtResource("3_i1mna")]
 position = Vector2(969, -211)

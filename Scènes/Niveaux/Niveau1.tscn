@@ -1,0 +1,32 @@
+[gd_scene load_steps=7 format=3 uid="uid://dd50lasug0q0b"]
+
+[ext_resource type="PackedScene" uid="uid://d1q0aron3h1bb" path="res://Scènes/Player/User_Interface.tscn" id="1_vv81f"]
+[ext_resource type="PackedScene" uid="uid://1revtuskc1fl" path="res://Scènes/Player/Ship.tscn" id="2_xcn68"]
+[ext_resource type="AudioStream" uid="uid://b1ywycft7wwsu" path="res://Sons/launch_sound.wav" id="3_xeads"]
+[ext_resource type="AudioStream" uid="uid://do1ufgyyx0r3b" path="res://Sons/land_sound.wav" id="4_a85uk"]
+[ext_resource type="AudioStream" uid="uid://c5b05j528txdt" path="res://Sons/explosion_sound.wav" id="5_usa0s"]
+[ext_resource type="AudioStream" uid="uid://qoe627xmxs1o" path="res://Sons/fly_loop_3.wav" id="6_2adox"]
+
+[node name="LEVEL1" type="Node2D"]
+
+[node name="UI" parent="." instance=ExtResource("1_vv81f")]
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("2_xcn68")]
+
+[node name="sfx_moveForward" type="AudioStreamPlayer" parent="CharacterBody2D"]
+stream = ExtResource("3_xeads")
+volume_db = -7.0
+
+[node name="sfx_moveBackward" type="AudioStreamPlayer" parent="CharacterBody2D"]
+stream = ExtResource("4_a85uk")
+volume_db = -7.0
+
+[node name="sfx_death_explode" type="AudioStreamPlayer" parent="CharacterBody2D"]
+stream = ExtResource("5_usa0s")
+volume_db = -2.0
+
+[node name="sfx_fly_loop" type="AudioStreamPlayer" parent="CharacterBody2D"]
+stream = ExtResource("6_2adox")
+volume_db = -3.0
+
+[node name="Environnement" type="Node2D" parent="."]
