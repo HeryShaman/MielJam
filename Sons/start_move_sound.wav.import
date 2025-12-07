@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://do1ufgyyx0r3b"
-path="res://.godot/imported/land_sound.wav-fc32784f5a7a4c7773288c6deb2f6f87.sample"
+path="res://.godot/imported/start_move_sound.wav-d257eb5a2d904d90101ea20f447e9996.sample"
 
 [deps]
 
-source_file="res://Sons/land_sound.wav"
-dest_files=["res://.godot/imported/land_sound.wav-fc32784f5a7a4c7773288c6deb2f6f87.sample"]
+source_file="res://Sons/start_move_sound.wav"
+dest_files=["res://.godot/imported/start_move_sound.wav-d257eb5a2d904d90101ea20f447e9996.sample"]
 
 [params]
 
@@ -17,7 +17,7 @@ force/mono=false
 force/max_rate=false
 force/max_rate_hz=44100
 edit/trim=true
-edit/normalize=false
+edit/normalize=true
 edit/loop_mode=0
 edit/loop_begin=0
 edit/loop_end=-1

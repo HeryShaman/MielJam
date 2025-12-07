@@ -6,9 +6,14 @@ extends CharacterBody2D
 
 @export var DeathParticles : PackedScene
 
-@onready var sfx_move_forward: AudioStreamPlayer = $sfx_moveForward
+@onready var sfx_start_move: AudioStreamPlayer = $sfx_start_move
 @onready var sfx_move_backward: AudioStreamPlayer = $sfx_moveBackward
 @onready var sfx_death_explode: AudioStreamPlayer = $sfx_death_explode
+@onready var sfx_fly_loop: AudioStreamPlayer = $sfx_fly_loop
+var rotation_sound_has_played = false
+var movement_sound_has_played = false
+var timer_sound : float = 0
+@export var cooldown_sound = 0.2
 
 var Wishvel1 : Vector2 = Vector2.ZERO
 var Wishvel2 : Vector2 = Vector2.ZERO
@@ -88,10 +93,15 @@ func Move():
 		
 	if ShipDir.length() > 0.1:
 		velocity += ShipDir.rotated(rotation) * Speed
+		if!movement_sound_has_played:
+			sfx_start_move.play()
+			movement_sound_has_played = true
+
 		
 	else:
 		velocity *= Friction
 		
+	
 	move_and_slide()
 
 func OnRocketCollision(body: Node2D) -> void:
@@ -100,6 +110,9 @@ func OnRocketCollision(body: Node2D) -> void:
 
 func RespawnShip():
 
+	sfx_death_explode.play()
+	movement_sound_has_played = false
+	rotation_sound_has_played = false
 	var explosionVFX = DeathParticles.instantiate()
 	explosionVFX.position = global_position
 	explosionVFX.rotation = global_rotation
