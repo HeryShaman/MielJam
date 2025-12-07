@@ -1,11 +1,22 @@
+<<<<<<< HEAD
 [gd_scene load_steps=7 format=3 uid="uid://cxenpym3287wf"]
+=======
+[gd_scene load_steps=9 format=3 uid="uid://cxenpym3287wf"]
+>>>>>>> ab3ca6fb8b8f178bd900ba0795d56183f5473241
 
 [ext_resource type="PackedScene" uid="uid://d1q0aron3h1bb" path="res://Scènes/Player/User_Interface.tscn" id="1_t3077"]
 [ext_resource type="Texture2D" uid="uid://g2nijfi4joru" path="res://Shaders/Space Background.png" id="1_y3gs8"]
 [ext_resource type="PackedScene" uid="uid://1revtuskc1fl" path="res://Scènes/Player/Ship.tscn" id="2_i1mna"]
 [ext_resource type="PackedScene" uid="uid://blx111f2nfqno" path="res://Scènes/Assets/Asteroid.tscn" id="3_i1mna"]
+[ext_resource type="AudioStream" uid="uid://b1ywycft7wwsu" path="res://Sons/launch_sound.wav" id="3_s1oxw"]
 [ext_resource type="PackedScene" uid="uid://ca2eo270tsxd0" path="res://Scènes/Assets/CheckPoint.tscn" id="4_k83gu"]
+<<<<<<< HEAD
 [ext_resource type="PackedScene" uid="uid://dtvq8bc7muw8a" path="res://Scènes/Assets/NextPointArea.tscn" id="6_j5hba"]
+=======
+[ext_resource type="AudioStream" uid="uid://do1ufgyyx0r3b" path="res://Sons/land_sound.wav" id="4_wvc6q"]
+[ext_resource type="AudioStream" uid="uid://c5b05j528txdt" path="res://Sons/explosion_sound.wav" id="5_ukrm5"]
+[ext_resource type="AudioStream" uid="uid://qoe627xmxs1o" path="res://Sons/fly_loop_3.wav" id="6_f23ta"]
+>>>>>>> ab3ca6fb8b8f178bd900ba0795d56183f5473241
 
 [node name="Level1" type="Node2D"]
 
@@ -24,6 +35,22 @@ expand_mode = 3
 Friction = 0.995
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+
+[node name="sfx_moveForward" type="AudioStreamPlayer" parent="CharacterBody2D"]
+stream = ExtResource("3_s1oxw")
+volume_db = -7.0
+
+[node name="sfx_moveBackward" type="AudioStreamPlayer" parent="CharacterBody2D"]
+stream = ExtResource("4_wvc6q")
+volume_db = -7.0
+
+[node name="sfx_death_explode" type="AudioStreamPlayer" parent="CharacterBody2D"]
+stream = ExtResource("5_ukrm5")
+volume_db = -2.0
+
+[node name="sfx_fly_loop" type="AudioStreamPlayer" parent="CharacterBody2D"]
+stream = ExtResource("6_f23ta")
+volume_db = -3.0
 
 [node name="Environnement" type="Node2D" parent="." groups=["Environnement"]]
 
